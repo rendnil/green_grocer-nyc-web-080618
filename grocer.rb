@@ -104,4 +104,4 @@ coupons = [
     ]    
   #consolidate_cart(items) 
   
- # apply_coupons(cart, coupons)
+apply_clearance(cart)
