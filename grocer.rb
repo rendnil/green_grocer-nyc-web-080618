@@ -80,7 +80,13 @@ def checkout(cart, coupons)
   updated_cart = apply_coupons(cart, coupons)
   updated_cart = apply_clearance(updated_cart)
   
+  cost_array = [ ]
   
+  updated_cart.each do |item_name, attributes|
+    cost_array.push(attributes[:price]*attributes[:count])
+  
+  end  
+  puts cost_array
 end
 
 items = [
@@ -106,3 +112,4 @@ coupons = [
   #consolidate_cart(items) 
   
 #apply_clearance(cart)
+checkout(cart, coupons)
