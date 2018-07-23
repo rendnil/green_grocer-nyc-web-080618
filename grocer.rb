@@ -53,7 +53,7 @@ def apply_coupons(cart, coupons)
       cart.each do |item_name, attributes|
         #puts item_name
         #puts attributes
-        if key == :item && value == item_name
+        if key == :item && value == item_name && cart[item_name][:count] >= coupon[:num]
           #puts item_name
           cart[item_name][:count] = cart[item_name][:count] - coupon[:num]
          
