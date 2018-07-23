@@ -84,9 +84,15 @@ def checkout(cart, coupons)
   
   updated_cart.each do |item_name, attributes|
     cost_array.push(attributes[:price]*attributes[:count])
+  end 
   
-  end  
-  puts cost_array
+  total_cost = 0
+  cost_array.each do |price|
+    total_cost = total_cost + price
+  end
+    
+  
+  puts total_cost
 end
 
 items = [
