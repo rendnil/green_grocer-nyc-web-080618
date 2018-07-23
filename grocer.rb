@@ -77,7 +77,8 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  updated_cart = apply_coupons(cart, coupons)
+  updated_cart = consolidate_cart(cart)
+  updated_cart = apply_coupons(updated_cart, coupons)
   updated_cart = apply_clearance(updated_cart)
   
   cost_array = [ ]
@@ -118,4 +119,4 @@ coupons = [
   #consolidate_cart(items) 
   
 #apply_clearance(cart)
-checkout(cart, coupons)
+#checkout(cart, coupons)
