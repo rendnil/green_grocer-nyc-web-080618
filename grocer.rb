@@ -92,7 +92,7 @@ def checkout(cart, coupons)
   end
     
   
-  puts total_cost
+  puts total_cost.round(2)
 end
 
 items = [
