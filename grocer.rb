@@ -72,7 +72,7 @@ def apply_clearance(cart)
    puts cart
    puts item_name.class
    if attributes[:clearance] == true
-     item_name[:price] = 0.8*item_name[:price]     
+     attributes[:price] = 0.8*item_name[:price]     
  
  
  end
