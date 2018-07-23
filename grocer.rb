@@ -77,7 +77,10 @@ def apply_clearance(cart)
 end
 
 def checkout(cart, coupons)
-  # code here
+  updated_cart = apply_coupons(cart, coupons)
+  updated_cart = apply_clearance(updated_cart)
+  
+  
 end
 
 items = [
