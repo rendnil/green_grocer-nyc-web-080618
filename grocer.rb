@@ -91,6 +91,10 @@ def checkout(cart, coupons)
   cost_array.each do |price|
     total_cost = total_cost + price
   end
+  
+  if total_cost > 100
+    total_cost = 0.9*total_cost
+  end  
     
   
   total_cost.round(2)
