@@ -106,4 +106,4 @@ coupons = [
     ]    
   #consolidate_cart(items) 
   
-apply_clearance(cart)
+#apply_clearance(cart)
